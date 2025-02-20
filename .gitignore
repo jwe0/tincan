@@ -1,6 +1,7 @@
 # Dirs
 env
 __pycache__
+notes
 
 # Files
 config.json
