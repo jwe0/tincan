@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Generator</title>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const author = urlParams.get("author");
+        const title = urlParams.get("title");
+        const thumbnail = urlParams.get("thumbnail");
+        const description = urlParams.get("description");
+        const url = urlParams.get("url");
+        const colour = urlParams.get("colour");
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('meta[name="og:site_name"]').setAttribute("content", author);
+            document.querySelector('meta[name="og:title"]').setAttribute("content", title);
+            document.querySelector('meta[property="og:image"]').setAttribute("content", thumbnail);
+            document.querySelector('meta[name="og:description"]').setAttribute("content", description);
+            document.querySelector('meta[name="og:url"]').setAttribute("content", url);
+            document.querySelector('meta[name="theme-color"]').setAttribute("content", `#${colour}`);
+        });
+    </script>
+
+    <meta name="og:site_name" content="">
+    <meta name="og:type" content="object">
+    <meta name="og:title" content="">
+    <meta property="og:image" content="">
+    <meta name="og:description" content="">
+    <meta name="og:url" content="">
+    <meta name="theme-color" content="">
+</head>
+<body>
+    <h1>Embed Generator</h1>
+</body>
+</html>
