@@ -1,7 +1,7 @@
 import discord, tls_client
 from discord.ext import commands
 
-from core.modules.init import check_dirs, load_config
+from core.modules.init import check_dirs, load_config, check_files
 from core.modules.logging import *
 
 class Bot:
@@ -15,6 +15,7 @@ class Bot:
 
     def init_bot(self):
         check_dirs()
+        check_files()
 
         self.config = load_config()
         self.token  = self.config["token"]
