@@ -2,16 +2,25 @@
     {
         "name" : "status",
         "arguments" : [],
-        "description" : "Returns the status of the bot"
+        "description" : "Returns the status of the bot",
+        "section" : "misc"
     },
     {
         "name" : "search",
         "arguments" : ["command_name"],
-        "description" : "Searches for a command"
+        "description" : "Searches for a command",
+        "section" : "misc"
     },
     {
         "name" : "help",
         "arguments" : ["page"],
-        "description" : "Returns a list of commands"
+        "description" : "Returns a list of commands",
+        "section" : "misc"
+    },
+    {
+        "name" : "spotify",
+        "arguments" : ["command_name (pause/play/previous/next/select/info)", "args"],
+        "description" : "Spotify commands",
+        "section" : "spotify"
     }
 ]

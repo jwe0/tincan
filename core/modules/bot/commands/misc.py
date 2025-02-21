@@ -24,7 +24,7 @@ class misc:
             for cmd in cmds:
                 message.append({
                     "name" : cmd["name"].ljust(longest_name), 
-                    "arguments" : f"{''.join(cmd['arguments']).ljust(longest_args) if cmd['arguments'] else 'None'.ljust(longest_args)}",
+                    "arguments" : f"{', '.join(cmd['arguments']).ljust(longest_args) if cmd['arguments'] else 'None'.ljust(longest_args)}",
                     "description" : cmd["description"]
                 })
             await ctx.send(self.self.output("Help | ({} -> {})".format(str(from_cmd_count + 1), str(to_cmd_count)), message, ctx.author.name, self.self.style, "help"))
