@@ -1,18 +1,17 @@
 from core.modules.logging import *
 
 class general:
-    def __init__(self, bot, self2):
-        self.bot = bot
-        self.self = self2
+    def __init__(self, external_self):
+        self.self = external_self
 
-        @self.bot.event
+        @self.self.bot.event
         async def on_ready():
-            success(f"Logged in as {self.bot.user}")
+            success(f"Logged in as {self.self.bot.user}")
     
-        @self.bot.event
+        @self.self.bot.event
         async def on_message(message):
-            await self.bot.process_commands(message)
+            await self.self.bot.process_commands(message)
     
-        @self.bot.event
+        @self.self.bot.event
         async def on_command(ctx):
             await ctx.message.delete()

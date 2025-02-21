@@ -14,12 +14,17 @@ def check_dirs():
 def check_files():
     files_json = [
         ["core/settings/style.json", {
-            "default" : {
-                "start" : "> -# `",
-                "end" : "`",
-                "split" : "»",
-                "footer" : "```{time} | Tin Can Bot```",
-                "header" : "```{title}```"
+            "default": {
+                "start": ">",
+                "end": "",
+                "split": " » ",
+                "footer": "> ``````{time} | Tin Can Bot```",
+                "header": "> ```{title}``````\n",
+                "line_end": "\n",
+                "formats" : {
+                    "general" : "{start} {key} {split} {value}{line_end}",
+                    "help" : "{start} {name} {split} [ {arguments} ] {split} {description}{line_end}"
+                }
             }
         }]
     ]

@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "status",
+        "arguments" : [],
+        "description" : "Returns the status of the bot"
+    },
+    {
+        "name" : "search",
+        "arguments" : ["command_name"],
+        "description" : "Searches for a command"
+    },
+    {
+        "name" : "help",
+        "arguments" : ["page"],
+        "description" : "Returns a list of commands"
+    }
+]

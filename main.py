@@ -32,6 +32,8 @@ class Bot:
 
         self.bot = commands.Bot(command_prefix=self.prefix, self_bot=True)
 
+        self.bot.remove_command("help")
+
         BotInit(self)
 
     def run_bot(self):
