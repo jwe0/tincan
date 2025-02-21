@@ -34,7 +34,8 @@ def create_config():
     prefix = inpt("Prefix: ")
     config = {
         "token": token,
-        "prefix": prefix
+        "prefix": prefix,
+        "active_style" : "default"
     }
     with open("core/assets/config.json", "w") as f:
         json.dump(config, f, indent=4)
