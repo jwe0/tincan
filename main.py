@@ -8,8 +8,7 @@ from core.modules.logging import *
 from core.modules.output import output
 
 # Init core Discord modules
-from core.modules.commands.events import init_events
-from core.modules.commands.commands import init_commands
+from core.modules.bot.bot import BotInit
 
 class Bot:
     def __init__(self):
@@ -33,8 +32,7 @@ class Bot:
 
         self.bot = commands.Bot(command_prefix=self.prefix, self_bot=True)
 
-        init_events(self)
-        init_commands(self)
+        BotInit(self)
 
     def run_bot(self):
         self.init_bot()
